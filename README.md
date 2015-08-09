@@ -21,7 +21,7 @@ varios archivos y un proyecto sirve para organizar de manera logica los elemento
 
 10. Convierte un tipo de dato base a otro tipo de dato base.
 
-11. -
+11. Console.WriteLine("C:\Users\juanfh\Desktop\MiArchivo.txt"); //el backslash es un caracter de escape por eso para que el programa lo reconozca hay que poner doble backslash.
 
 12. La variable tipo SHORT se desborda del rango.
 
@@ -77,8 +77,117 @@ class. tipo referencia. heap.
 31.
 el tipo class se guarda en el heap y los tipo struct en el stack
 
-C1. 
+C1. using System;
 
+namespace RetoUno
+{
+	public class Reto2
+	{
+		public Reto2 ()
+		{
+			string radio = "";
+			string altura = "";
+			double volumen = 0;
+			double area = 0;
+
+			Console.WriteLine ("Escriba  el radio:");
+			radio = Console.ReadLine ();
+			double r = double.Parse (radio);
+
+			Console.WriteLine ("Escriba la altura:");
+			altura = Console.ReadLine ();
+			double a = double.Parse (altura);
+
+			area = r * r * Math.PI;
+			volumen = area * a;
+
+			Console.WriteLine ("el area es: {0} y el volumen es {1}", area, volumen);
+			Console.ReadKey ();
+
+
+
+		}
+	}
+}
+
+C2. int a = 7;
+        int b = 2;
+        float c = 4;
+        float d = 3;
+
+        float result = ((float)(a)/(float)(b)) + c / d;
+        Console.WriteLine("resultado: {0}",result);
+Para convertirlo en float.
+
+C3.
+int[] numeros = {4, 51, -7, 13, -99, 15, -8, 45, 90};
+        int menor = 0;
+        int mayor = 0;
+
+        foreach (int numero in numeros)
+        {
+            if (menor > numero)
+            {
+                menor = numero;
+            }
+
+            if (mayor < numero)
+            {
+                mayor = numero;
+            }
+        }
+
+        Console.WriteLine("El mayor es {0} y el menor es {1}", mayor , menor);
+        
+      
+c4. 
+using System;
+
+namespace Application
+{
+	public class C4_Reto_
+	{
+		public C4_Reto_ ()
+		{
+			string Numero = "";
+			Console.WriteLine ("Escriba un numero entre el 1 al 7");
+			Numero = Console.ReadLine();
+			int num = int.Parse (Numero);
+
+			switch (Numero) 
+			{
+			case 1:
+				Console.WriteLine ("el dia es {0}", sabado);
+				break;
+
+			case 2:
+				Console.WriteLine ("el dia es {0}", domingo);
+				break;
+			case 3:
+				Console.WriteLine ("el dia es {0}", lunes);
+				break;
+			case 4:
+				Console.WriteLine ("el dia es {0}", martes);
+				break;
+			case 5:
+				Console.WriteLine ("el dia es {0}", miercoles);
+				break;
+			case 6:
+				Console.WriteLine ("el dia es {0}", jueves);
+				break;
+
+			case 7:
+				Console.WriteLine ("el dia es {0}", viernes);
+				break;
+
+			default:
+				break;
+
+			
+
+		}
+	}
+}
 
 c5. 
 se crea una estructura tipo time en el stack. y un timestruct tipo 
